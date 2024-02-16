@@ -36,10 +36,22 @@ class MyPage(Page):
         "q1_4",
     ]
 
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(
+            label=player.participant.label,
+        )
+
 
 class Results(Page):
     form_model = "player"
     form_fields = ["checked"]
+
+    @staticmethod
+    def vars_for_template(player: Player):
+        return dict(
+            label=player.participant.label,
+        )
 
     @staticmethod
     def app_after_this_page(player: Player, upcoming_apps):
