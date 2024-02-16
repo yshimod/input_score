@@ -1,0 +1,38 @@
+{{ block title }}
+確認
+{{ endblock }}
+{{ block content }}
+
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">得点</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">q1_1</th>
+                <td>{{ player.q1_1 }}</td>
+            </tr>
+            <tr>
+                <th scope="row">q1_2</th>
+                <td>{{ player.q1_2 }}</td>
+            </tr>
+            <tr>
+                <th scope="row">q1_3</th>
+                <td>{{ player.q1_3 }}</td>
+            </tr>
+            <tr>
+                <th scope="row">q1_4</th>
+                <td>{{ player.q1_4 }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{{ formfields }}
+{{ next_button }}
+
+{{ endblock }}
