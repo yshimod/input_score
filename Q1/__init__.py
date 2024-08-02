@@ -1,4 +1,5 @@
 from otree.api import *
+import json
 
 
 class C(BaseConstants):
@@ -80,8 +81,13 @@ class Results(Page):
 
     @staticmethod
     def vars_for_template(player: Player):
+        alldata = dict(vars(player))
         return dict(
             label=player.participant.label,
+            alldata=alldata,
+            data=json.dumps(
+                {k: alldata[k] for k in sorted(alldata) if k.startswith("q")}, indent=4
+            ),
         )
 
     @staticmethod
