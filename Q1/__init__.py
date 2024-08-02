@@ -23,26 +23,26 @@ class Player(BasePlayer):
     # q1_3 = models.IntegerField(choices=C.raw_score)
     # q1_4 = models.IntegerField(choices=C.raw_score)
 
-    q1_1_1 = models.BooleanField(initial=False)
-    q1_1_2 = models.BooleanField(initial=False)
-    q1_1_3 = models.BooleanField(initial=False)
-    q1_2_1 = models.BooleanField(initial=False)
-    q1_2_2 = models.BooleanField(initial=False)
-    q1_2_3 = models.BooleanField(initial=False)
+    q1_1_1 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q1_1_2 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q1_1_3 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q1_2_1 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q1_2_2 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q1_2_3 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
 
-    q2_1 = models.BooleanField(initial=False)
-    q2_2 = models.BooleanField(initial=False)
-    q2_3_ab = models.BooleanField(initial=False)
-    q2_3_c = models.BooleanField(initial=False)
-    q2_4 = models.BooleanField(initial=False)
-    q2_5 = models.BooleanField(initial=False)
+    q2_1 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q2_2 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q2_3_ab = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q2_3_c = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q2_4 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q2_5 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
 
-    q3_1 = models.BooleanField(initial=False)
-    q3_2 = models.BooleanField(initial=False)
-    q3_3 = models.BooleanField(initial=False)
-    q3_4 = models.BooleanField(initial=False)
+    q3_1 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q3_2 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q3_3 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
+    q3_4 = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
 
-    checked = models.BooleanField(initial=False)
+    checked = models.BooleanField(initial=False, widget=widgets.RadioSelectHorizontal)
 
 
 # PAGES
