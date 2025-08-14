@@ -2,20 +2,14 @@ from os import environ
 
 SESSION_CONFIGS = [
     dict(
-        name="Q1",
-        app_sequence=["Q1", "final"],
+        name="saiten",
+        app_sequence=[
+            "Q1",
+            "Q2",
+            "final",
+        ],
         num_demo_participants=1,
     ),
-    # dict(
-    #     name="Q2",
-    #     app_sequence=["Q2", "final"],
-    #     num_demo_participants=1,
-    # ),
-    # dict(
-    #     name="Q3",
-    #     app_sequence=["Q3", "final"],
-    #     num_demo_participants=1,
-    # ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs

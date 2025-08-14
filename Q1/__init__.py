@@ -7,8 +7,6 @@ class C(BaseConstants):
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 3
 
-    # raw_score = list(range(0, 6))
-
 
 class Subsession(BaseSubsession):
     pass
@@ -19,29 +17,16 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    # q1_1 = models.IntegerField(choices=C.raw_score)
-    # q1_2 = models.IntegerField(choices=C.raw_score)
-    # q1_3 = models.IntegerField(choices=C.raw_score)
-    # q1_4 = models.IntegerField(choices=C.raw_score)
-
-    q1_1_1 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q1_1_2 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q1_1_3 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q1_2_1 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q1_2_2 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q1_2_3 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-
-    q2_1 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q2_2 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q2_3_ab = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q2_3_c = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q2_4 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q2_5 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-
-    q3_1 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q3_2 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q3_3 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
-    q3_4 = models.BooleanField(widget=widgets.RadioSelectHorizontal)
+    q1 = models.StringField()
+    q2 = models.StringField()
+    q3 = models.StringField()
+    q4 = models.StringField()
+    q5 = models.StringField()
+    q6 = models.StringField()
+    q7 = models.StringField()
+    q8 = models.StringField()
+    q9 = models.StringField()
+    q10 = models.StringField()
 
     checked = models.BooleanField(widget=widgets.RadioSelectHorizontal)
 
@@ -50,22 +35,16 @@ class Player(BasePlayer):
 class MyPage(Page):
     form_model = "player"
     form_fields = [
-        "q1_1_1",
-        "q1_1_2",
-        "q1_1_3",
-        "q1_2_1",
-        "q1_2_2",
-        "q1_2_3",
-        "q2_1",
-        "q2_2",
-        "q2_3_ab",
-        "q2_3_c",
-        "q2_4",
-        "q2_5",
-        "q3_1",
-        "q3_2",
-        "q3_3",
-        "q3_4",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
     ]
 
     @staticmethod
@@ -93,7 +72,7 @@ class Results(Page):
     @staticmethod
     def app_after_this_page(player: Player, upcoming_apps):
         if player.checked:
-            return upcoming_apps[-1]
+            return upcoming_apps[0]
 
 
 page_sequence = [MyPage, Results]

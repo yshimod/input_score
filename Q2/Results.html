@@ -4,32 +4,9 @@
 {{ block content }}
 
 <div>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">得点</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">q2_1</th>
-                <td>{{ player.q2_1 }}</td>
-            </tr>
-            <tr>
-                <th scope="row">q2_2</th>
-                <td>{{ player.q2_2 }}</td>
-            </tr>
-            <tr>
-                <th scope="row">q2_3</th>
-                <td>{{ player.q2_3 }}</td>
-            </tr>
-            <tr>
-                <th scope="row">q2_4</th>
-                <td>{{ player.q2_4 }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div style="width: 1024px; background-color: whitesmoke;">
+        <pre>{{ data }}</pre>
+    </div>
 </div>
 
 {{ formfields }}
